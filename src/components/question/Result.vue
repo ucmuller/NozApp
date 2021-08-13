@@ -65,6 +65,16 @@
       </v-col>
       <v-col cols="12" class="px-3 pt-5">
         <v-card
+          @click="openWindow('https://cramel.jp/personalcoloranalysis')"
+        >
+          <v-img
+            :src="require('@/assets/images/personalColorImage.jpeg')"
+            :aspect-ratio="16/9"
+          ></v-img>
+        </v-card>
+      </v-col>
+      <v-col cols="12" class="px-3 pt-5">
+        <v-card
           @click="openWindow('https://cramel.jp/productlist/14')"
         >
           <v-img
@@ -98,13 +108,21 @@
       </v-col> -->
       <v-col cols="12" class="px-3 pt-5">
         <v-card
+          @click="openWindow('https://cramel.jp/personalcoloranalysis')"
+        >
+          <v-img
+            :src="require('@/assets/images/personalColorImage.jpeg')"
+            :aspect-ratio="16/9"
+          ></v-img>
+        </v-card>
+        <!-- <v-card
           @click="toCramelBottomBanner('https://cramel.jp/productlist/14')"
         >
           <v-img
             :src="require('@/assets/images/shampoo_cramel.001.jpeg')"
             :aspect-ratio="16/9"
           ></v-img>
-        </v-card>
+        </v-card> -->
       </v-col>
       <v-col cols="12" class="py-5">
         <h3 class="pt-10">より詳しく診断を希望の方</h3>

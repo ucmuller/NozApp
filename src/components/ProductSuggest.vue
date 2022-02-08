@@ -131,14 +131,14 @@
           :item=item
           @handle-parent=updateDialog
         />
-        <v-col
+        <!-- <v-col
           v-if="i==1"
           cols="12" class="px-3 pt-5">
           <v-img
-            :src="require('@/assets/images/monicam.jpg')"
-            @click="pushBannerBota()"
+            src="https://firebasestorage.googleapis.com/v0/b/select-shampoo-7310c.appspot.com/o/banner%2Fkezome_illust2.png?alt=media&token=f6a6f4cd-0d21-43ff-86e9-bc900fa227ee"
+            @click="pushBannerMiddle('https://kezomenomadoguchi.com/qcq_reserve/smt/mapsel.php?mode=first')"
           ></v-img>
-        </v-col>
+        </v-col> -->
       </v-col>
     </div>
   </v-col>
@@ -226,40 +226,45 @@ export default class ProductSuggest extends Vue {
     window.open('https://monicam.jp/', '_blank', 'width=1024,height=768,scrollbars=yes,resizable=yes')
   }
 
+  public pushBannerMiddle (url: string) {
+    this.$ga.event('pushBannerMiddle', 'push')
+    window.open(url, '_blank', 'width=1024,height=768,scrollbars=yes,resizable=yes')
+  }
+
   public openModal () {
     this.$ga.event('openProductModal', 'push')
   }
 
-   private chartData: any = (point: any) => {
-     const data = {
-       labels: ['泡立ち', '頭皮への優しさ', '髪の補修力', '安全性', '　　仕上がり'],
-       datasets: [
-         {
-           label: 'シャンプー解析',
-           data: point.map((point: number) => point * 0.75),
-           backgroundColor: [
-             'rgba(0, 173, 181, 0.5)'
-           ],
-           borderColor: [
-             'rgba(0, 173, 181, 1)'
-           ],
-           borderWidth: 1
-         },
-         {
-           label: 'アナタのタイプ',
-           data: this.typePoint,
-           backgroundColor: [
-             'rgba(255, 190, 11, 0.5)'
-           ],
-           borderColor: [
-             'rgba(255, 190, 11, 1)'
-           ],
-           borderWidth: 1
-         }
-       ]
-     }
-     return data
-   }
+  private chartData: any = (point: any) => {
+    const data = {
+      labels: ['泡立ち', '頭皮への優しさ', '髪の補修力', '安全性', '　　仕上がり'],
+      datasets: [
+        {
+          label: 'シャンプー解析',
+          data: point.map((point: number) => point * 0.75),
+          backgroundColor: [
+            'rgba(0, 173, 181, 0.5)'
+          ],
+          borderColor: [
+            'rgba(0, 173, 181, 1)'
+          ],
+          borderWidth: 1
+        },
+        {
+          label: 'アナタのタイプ',
+          data: this.typePoint,
+          backgroundColor: [
+            'rgba(255, 190, 11, 0.5)'
+          ],
+          borderColor: [
+            'rgba(255, 190, 11, 1)'
+          ],
+          borderWidth: 1
+        }
+      ]
+    }
+    return data
+  }
 
   private chartOption: ChartOptions = {
     scale: {

@@ -73,17 +73,17 @@
           ></v-img>
         </v-card>
       </v-col>
-      <v-col cols="12" class="px-3 pt-5">
+      <!-- <v-col cols="12" class="px-3 pt-5">
         <v-card
-          @click="openWindow('https://cramel.jp/productlist/14')"
+          @click="pushBannerTop('https://kezomenomadoguchi.com/qcq_reserve/smt/mapsel.php?mode=first')"
         >
           <v-img
-            :src="require('@/assets/images/shampoo_cramel.001.jpeg')"
+            src="https://firebasestorage.googleapis.com/v0/b/select-shampoo-7310c.appspot.com/o/banner%2Fkezome_illust1.png?alt=media&token=357effe5-d9de-4a99-b14a-3e41072c1559"
             :aspect-ratio="16/9"
           ></v-img>
         </v-card>
-      </v-col>
-      <!-- <v-col cols="12" class="pt-3 pb-0">
+      </v-col> -->
+      <v-col cols="12" class="pt-3 pb-0">
         <v-btn
           class="white--text button font-weight-bold"
           color="#19C0C9"
@@ -92,7 +92,7 @@
         >
           YouTuberが使っているシャンプー
         </v-btn>
-      </v-col> -->
+      </v-col>
       <v-col cols="12" class="pa-0">
         <ProductSuggest :shampooDataArray=shampooDataArray :typePoint=localValues />
       </v-col>
@@ -282,6 +282,16 @@ export default class Result extends Vue {
     if (url === 'https://cramel.jp/productlist/14') {
       this.$ga.event('toCramel', 'push')
     }
+    window.open(url, '_blank', 'width=1024,height=768,scrollbars=yes,resizable=yes')
+  }
+
+  public pushBannerTop (url: string) {
+    this.$ga.event('pushBannerTop', 'push')
+    window.open(url, '_blank', 'width=1024,height=768,scrollbars=yes,resizable=yes')
+  }
+
+  public pushBannerMiddle (url: string) {
+    this.$ga.event('pushBannerMiddle', 'push')
     window.open(url, '_blank', 'width=1024,height=768,scrollbars=yes,resizable=yes')
   }
 

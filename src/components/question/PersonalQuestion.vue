@@ -30,7 +30,6 @@
     </v-row>
     <v-row class="text-center question-row" justify="space-around">
       <v-col cols="12" class="center">
-        <!-- <v-btn class="question-button" large @click="deleteValue">AGAIN</v-btn> -->
         <v-btn
           class="question-button"
           large

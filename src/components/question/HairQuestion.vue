@@ -33,14 +33,13 @@
     <v-row class="text-center question-row" justify="space-around">
       <v-col cols="12" class="center">
         <v-btn
-         class="question-button"
-         large color="lime"
-         :disabled="!ready"
-         @click="setValue">
+          class="question-button"
+          large color="lime"
+          :disabled="!ready"
+          @click="setValue">
           NEXT
         </v-btn>
       </v-col>
-      <!-- <v-btn class="question-button" large @click="deleteValue">AGAIN</v-btn> -->
     </v-row>
     <v-row class="text-center page-nation" justify="space-around" >
       <h2>3/4</h2>

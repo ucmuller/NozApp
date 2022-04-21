@@ -40,9 +40,6 @@
         </v-card>
       </v-col>
       <v-col cols="12" class="type-introduction py-5">
-        <!-- <v-col cols="12" class="ma-0 pa-0">
-          <chart :chartData="chartData" :options="chartOption"></chart>
-        </v-col> -->
         <v-col cols="12" class="pa-0">
           <v-card>
             <chart :chartData="chartData" :options="chartOption"></chart>
@@ -73,16 +70,6 @@
           ></v-img>
         </v-card>
       </v-col>
-      <!-- <v-col cols="12" class="px-3 pt-5">
-        <v-card
-          @click="pushBannerTop('https://kezomenomadoguchi.com/qcq_reserve/smt/mapsel.php?mode=first')"
-        >
-          <v-img
-            src="https://firebasestorage.googleapis.com/v0/b/select-shampoo-7310c.appspot.com/o/banner%2Fkezome_illust1.png?alt=media&token=357effe5-d9de-4a99-b14a-3e41072c1559"
-            :aspect-ratio="16/9"
-          ></v-img>
-        </v-card>
-      </v-col> -->
       <v-col cols="12" class="pt-3 pb-0">
         <v-btn
           class="white--text button font-weight-bold"
@@ -96,16 +83,6 @@
       <v-col cols="12" class="pa-0">
         <ProductSuggest :shampooDataArray=shampooDataArray :typePoint=localValues />
       </v-col>
-      <!-- <v-col cols="12" class="pt-3 pb-0">
-        <v-btn
-          class="white--text button font-weight-bold"
-          color="#19C0C9"
-          large
-          @click="openWindow('https://cramel.jp/productlist/14')"
-        >
-          YouTuberが使っているシャンプー
-        </v-btn>
-      </v-col> -->
       <v-col cols="12" class="px-3 pt-5">
         <v-card
           @click="openWindow('https://cramel.jp/personalcoloranalysis')"
@@ -115,14 +92,6 @@
             :aspect-ratio="16/9"
           ></v-img>
         </v-card>
-        <!-- <v-card
-          @click="toCramelBottomBanner('https://cramel.jp/productlist/14')"
-        >
-          <v-img
-            :src="require('@/assets/images/shampoo_cramel.001.jpeg')"
-            :aspect-ratio="16/9"
-          ></v-img>
-        </v-card> -->
       </v-col>
       <v-col cols="12" class="py-5">
         <h3 class="pt-10">より詳しく診断を希望の方</h3>
@@ -130,21 +99,6 @@
         <p class="line-introduction text-left">タイプ精度をあげるため、髪と頭皮にまつわる、より詳しい相談や診断をLINEにて承っております。 プロの美容師がより詳しいカウンセリング診断をして、アナタにあったシャンプーやトリートメント、施術などのオススメをしています。気軽にご相談下さい。</p>
         <h4 class="py-0">LINEで無料相談する</h4>
         <p class="red--text">(先着100名様無料)</p>
-        <!-- <v-btn
-          class="white--text button font-weight-bold mt-3"
-          color="#00B900"
-          large
-          block
-          @click="openWindow('https://lin.ee/Osk4lUC')"
-        >
-        <v-icon
-          left
-          dark
-        >
-          mdi-chat
-        </v-icon>
-          友だち追加
-        </v-btn> -->
         <a href="https://lin.ee/Osk4lUC"><img height="36" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
       </v-col>
       <v-col cols="12" class="py-5">

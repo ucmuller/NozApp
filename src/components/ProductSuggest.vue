@@ -14,42 +14,15 @@
               <div :class="prizeIcon[i]"></div>
             </v-avatar>
             </v-col>
-            <!-- <v-avatar
-              class="ma-3"
-              size="50"
-              tile
-            > -->
             <v-col cols="2" class="pa-0 ma-0">
               <img class="card-image" :src="item.image_url">
             </v-col>
-            <!-- </v-avatar> -->
             <v-col cols="8" class="pa-0 ma-0">
             <div class="card-string">
               <h4 class="product-name text-left">{{item.name}}</h4>
               <div class="card-string-icon">
                 <p class="product-price">¥{{item.price}} {{item.volume}}ml</p>
-                <!-- <v-btn
-                  class="modal-button white--text mx-1"
-                  small
-                  color="blue-grey darken-2"
-                  @click.stop="dialog[i] = true"
-                  @click="openModal()"
-                >
-                くわしく見る
-                </v-btn> -->
               </div>
-              <!-- <div>
-                <v-btn
-                  class="modal-button"
-                  outlined
-                  small
-                  width="150px"
-                  color="indigo"
-                  @click.stop.prevent="openWindow(item.affiliateLink)"
-                >
-                  Amazonへ
-                </v-btn>
-              </div> -->
             </div>
             </v-col>
           </div>
@@ -112,17 +85,6 @@
               先着50名様にプレゼント！
             </v-btn>
           </v-col>
-                  <!-- <v-rating
-            v-model="item.rating"
-            :length="rateLength"
-            background-color="grey lighten-1"
-            color="yellow accent-4"
-            dense
-            half-increments
-            hover
-            readonly
-            size="20"
-          ></v-rating> -->
         </v-card>
         <Modal
           :dialog=dialog[i]
@@ -131,14 +93,6 @@
           :item=item
           @handle-parent=updateDialog
         />
-        <!-- <v-col
-          v-if="i==1"
-          cols="12" class="px-3 pt-5">
-          <v-img
-            src="https://firebasestorage.googleapis.com/v0/b/select-shampoo-7310c.appspot.com/o/banner%2Fkezome_illust2.png?alt=media&token=f6a6f4cd-0d21-43ff-86e9-bc900fa227ee"
-            @click="pushBannerMiddle('https://kezomenomadoguchi.com/qcq_reserve/smt/mapsel.php?mode=first')"
-          ></v-img>
-        </v-col> -->
       </v-col>
     </div>
   </v-col>

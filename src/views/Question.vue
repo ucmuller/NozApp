@@ -190,8 +190,6 @@ export default class Question extends Vue {
         })
       })
       .then(() => {
-        // this.fetchBannerShampooData()
-        console.log(this.shampooDataArray)
       })
   }
 
@@ -230,7 +228,6 @@ export default class Question extends Vue {
       .doc()
       .set(data)
       .then(() => {
-        console.log('saved complete')
       })
   }
 
